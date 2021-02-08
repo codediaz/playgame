@@ -23,4 +23,17 @@ public class PlayerController : MonoBehaviour
         }
         myRigidbody2D.velocity = new Vector2(playerJumpForce, myRigidbody2D.velocity.y);
     }
+
+    /*02/08/2021 Collision*/
+    void OnTriggerEnter2D (Collider2D collision) 
+    {
+        if (collision.CompareTag("Item")) 
+        {
+            Debug.Log("Punto +1");
+        }
+        else if (collision.CompareTag("ItemBad")) 
+        {
+            Debug.Log("Muerte");
+        }
+    }
 }

@@ -8,6 +8,9 @@ TagManager:
   - Plataforma dos
   - Plataforma tres
   - PlataformGenerator
+  - Item
+  - ItemBad
+  - ItemGenarator
   layers:
   - Default
   - TransparentFX
