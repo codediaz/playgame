@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -33,7 +34,17 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.CompareTag("ItemBad")) 
         {
-            Debug.Log("Muerte");
+            PlayerDead();
         }
+        /*18/08/2021 Collision*/
+        else if (collision.CompareTag("DeathZone"))
+        {
+            PlayerDead();
+        }
+    }
+    /*02/08/2021 Collision*/
+    void PlayerDead() 
+    {
+        SceneManager.LoadScene("Principal");   
     }
 }
